@@ -54,5 +54,5 @@ W obraze z zadania 1(https://github.com/artemzharkov12/Zadanie1) miałem 1 wysok
 Dlatego stworzyłem nowy Dockerfile(jest w tym katalogu) i jego obraz na dockerhabie(https://hub.docker.com/repository/docker/psevdo12/zad2/general). Jak widać nie ma on nie wysokich nie krytycznych podatności.
 ![Docker Hub](images/obraz_zad2.png)
 
-Po przewodzienu suksesywnie zakończonej akcji "Test2" został stworzony obrz na dockerhubie(https://hub.docker.com/repository/docker/psevdo12/zadanie2/general) i github container registry(jest powiązany z repozitorium).
+Po przewodzienu suksesywnie zakończonej akcji "Test2" został stworzony obrz na dockerhubie(https://hub.docker.com/repository/docker/psevdo12/zadanie2/general) i github container registry(https://github.com/artemzharkov12/zadanie2/pkgs/container/zadanie2).
 ![Docker Hub](images/wynik.png)
