@@ -54,7 +54,7 @@ jobs:
           context: .
           push: false
           tags: ghcr.io/${{ github.repository }}:latest
-          cache-from: type=registry,ref=psevdo12/zad2:cache
+          cache-from: type=registry,ref=psevdo12/zadanie1:cache
           platforms: linux/amd64,linux/arm64
           file: Dockerfile
 
@@ -66,7 +66,7 @@ jobs:
       - name: Analyze Docker image with Docker Scout
         id: analyze_scout
         run: |
-          scout cves ${{ secrets.DOCKERHUB_USERNAME }}/zad2:latest --output scout-output.sarif
+          scout cves ${{ secrets.DOCKERHUB_USERNAME }}/zadanie1:latest --output scout-output.sarif
 
       - name: Debug full scout-output.sarif
         run: |
@@ -103,7 +103,7 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ github.repository }}:latest
-          cache-from: type=registry,ref=psevdo12/zad2:cache
+          cache-from: type=registry,ref=psevdo12/zadanie1:cache
           cache-to: type=registry,ref=psevdo12/zadanie2:cache,max_size=5GB
           platforms: linux/amd64,linux/arm64
 
@@ -114,6 +114,6 @@ jobs:
           context: .
           push: true 
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/zadanie2:latest
-          cache-from: type=registry,ref=psevdo12/zad2:cache
+          cache-from: type=registry,ref=psevdo12/zadanie1:cache
           cache-to: type=registry,ref=psevdo12/zadanie2:cache,max_size=5GB
          
